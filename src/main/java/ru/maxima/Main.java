@@ -10,9 +10,9 @@ public class Main {
         );
 
         RadioPlayer player = new RadioPlayer(
-                context.getBean("radioEnergy", RadioMaxima.class),
+                context.getBean("radioEnergy", RadioEnergy.class),
                 context.getBean("radioMaxima", RadioMaxima.class),
-                context.getBean("radioRecord", RadioMaxima.class));
+                context.getBean("radioRecord", RadioRecord.class));
         player.playRadio();
     }
 }
