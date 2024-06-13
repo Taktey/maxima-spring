@@ -1,8 +1,11 @@
 package ru.maxima;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Component("radioEnergy")
 public class RadioEnergy implements Radio{
     private List<String> songs = new ArrayList<>();
 

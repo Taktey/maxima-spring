@@ -7,26 +7,6 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-
-    <bean id="idOfRadioMaxima"
-          class="ru.maxima.RadioMaxima">
-        <constructor-arg value="metallica - am i evil"/>
-        <constructor-arg value="Led Zeppelin - Since i've been living you"/>
-        <constructor-arg value="Rammstein - Deutschland "/>
-    </bean>
-
-    <bean id="idOfRadioEnergy"
-          class="ru.maxima.RadioEnergy">
-        <constructor-arg value="Гимн России - Ольга бузова"/>
-        <constructor-arg value="МС Вспышкин - меня прёт"/>
-        <constructor-arg value="Колбасный цех - колбаса"/>
-    </bean>
-
-    <bean id="idOfRadioRecord"
-          class="ru.maxima.RadioRecord">
-        <constructor-arg value = "Вечерние новости"/>
-        <constructor-arg value="Gasoline - I Prevail"/>
-        <constructor-arg value="Break Stuff - Limp Bizkit"/>
-    </bean>
+    <context:component-scan base-package="ru.maxima"/>
 
 </beans>
