@@ -1,4 +1,5 @@
 package ru.maxima;
+
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
@@ -8,19 +9,10 @@ public class Main {
                 "applicationContext.xml"
         );
 
-        Radio radio = context.getBean("radioMaxima", RadioMaxima.class);
-
-        RadioPlayer player = new RadioPlayer(radio);
+        RadioPlayer player = new RadioPlayer(
+                context.getBean("radioEnergy", RadioMaxima.class),
+                context.getBean("radioMaxima", RadioMaxima.class),
+                context.getBean("radioRecord", RadioMaxima.class));
         player.playRadio();
-
-        radio = context.getBean("radioEnergy", RadioEnergy.class);
-        player = new RadioPlayer(radio);
-        player.playRadio();
-
-
-        radio = context.getBean("radioRecord", RadioRecord.class);
-        player = new RadioPlayer(radio);
-        player.playRadio();
-
     }
 }
